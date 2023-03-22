@@ -6,10 +6,92 @@
     font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
     margin: 0px;
+    padding: 0px;
 }
 
 body {
     height: 100vh;
-    background-color: black;
+    background-color: lightgreen;
     color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+    position: relative;
+    background-color: white;
+    color: black;
+
+    border-radius: 10px;
+    padding: 1.5em;
+    width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.day {
+    font-size: 1.3em;
+}
+
+.date {
+    color: #2C2D2D;
+    font-size: 0.9em;
+}
+
+.tasks {
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.completed {
+    color: grey;
+    text-decoration: line-through;
+}
+
+.close-button:hover {
+    color: red;
+    cursor: pointer;
+    font-weight: lighter;
+}
+
+.add-task-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    background-color: #77dd77;
+    color: #2C2D2D;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    font-size: 0.9em;
+    padding: 1em 1.5em;
+    border: 1px solid #77dd77;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.add-task-button:hover {
+    background-color: #3cd070; 
+    border: 1px solid  #3cd070;
 }
