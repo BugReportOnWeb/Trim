@@ -5,6 +5,25 @@ import AddTask from './components/AddTask'
 
 const App = () => {
     const inputRef = useRef(null)
+    const currentDate = new Date();
+
+    const [ date, month, year, day ] = [
+        currentDate.getDate(),
+        currentDate.getMonth(),
+        currentDate.getFullYear(),
+        currentDate.getDay()
+    ]
+
+    const days = [
+        'Sunday', 'Monday', 'Tuesday',
+        'Wednesday', 'Thursday', 'Friday', 'Saturday'
+    ]
+
+    const months = [
+        'January', 'Febuary', 'March', 'April',
+        'May', 'June', 'July', 'August', 'September',
+        'October', 'November', 'December'
+    ]
 
     const [tasks, setTasks] = useState([
         {
@@ -14,13 +33,23 @@ const App = () => {
         },
         {
             id: 2,
-            text: 'Background Texture',
+            text: 'Page change animation',
             done: false
         },
         {
             id: 3,
             text: 'Add delete all completed tasks options',
             done: true
+        },
+        {
+            id: 4,
+            text: '\'Delete All\' button testing',
+            done: true
+        },
+        {
+            id: 5,
+            text: 'Structure const data',
+            done: false
         },
     ])
 
@@ -58,7 +87,7 @@ const App = () => {
         })
     }
 
-    // Delete Completed Task
+    // Delete Completed Task(s)
     const deleteCompletedTask = () => {
         setTasks(prevTasks => {
             return prevTasks.filter(task => {
@@ -70,8 +99,8 @@ const App = () => {
     return (
         <div className='App'>
             <Header
-                day='Thursday'
-                date='March 23, 2023'
+                day={`${days[day]}`}
+                date={`${months[month]} ${date}, ${year}`}
                 taskLength={tasks.length}
                 deleteCompletedTask={deleteCompletedTask}
                 disabled={disabled}
