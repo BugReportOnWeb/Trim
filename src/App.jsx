@@ -52,11 +52,14 @@ const App = () => {
     return (
         <div className='App'>
             <Header day='Thursday' date='March 23, 2023' /> 
-            <Tasks 
-                tasks={tasks} 
-                deleteTask={deleteTask} 
-                toggleCompletion={toggleCompletion} 
-            />
+            {tasks.length > 0
+                ? <Tasks 
+                      tasks={tasks} 
+                      deleteTask={deleteTask} 
+                      toggleCompletion={toggleCompletion} 
+                  />
+                : <p className='no-tasks'>No tasks yet!</p>
+            }
             <AddTask addTask={addTask} />
         </div>
     )
