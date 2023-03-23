@@ -49,14 +49,28 @@ const App = () => {
         })
     }
 
+    // Delete Completed Task
+    const deleteCompletedTask = () => {
+        setTasks(prevTasks => {
+            return prevTasks.filter(task => {
+                return !task.done
+            })
+        })
+    }
+
     return (
         <div className='App'>
-            <Header day='Thursday' date='March 23, 2023' /> 
+            <Header
+                day='Thursday'
+                date='March 23, 2023'
+                taskLength={tasks.length}
+                deleteCompletedTask={deleteCompletedTask}
+            /> 
             {tasks.length > 0
                 ? <Tasks 
                       tasks={tasks} 
                       deleteTask={deleteTask} 
-                      toggleCompletion={toggleCompletion} 
+                      toggleCompletion={toggleCompletion}
                   />
                 : <p className='no-tasks'>No tasks yet!</p>
             }
