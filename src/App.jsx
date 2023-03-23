@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
 
 const App = () => {
+    const inputRef = useRef(null)
+
     const [tasks, setTasks] = useState([
         {
             id: 1,
@@ -32,10 +34,7 @@ const App = () => {
     }
 
     // Adding Task
-    const addTask = () => {
-        const id = Math.floor(Math.random() * 10000) + 1
-        const newTask = { id, text: 'Testing', done: false }
-
+    const addTask = (newTask) => {
         setTasks(prevTasks => {
             return [...prevTasks, newTask]
         })
@@ -43,7 +42,6 @@ const App = () => {
     
     // Toggle Completion
     const toggleCompletion = (id) => {
-        console.log(id)
         setTasks(prevTasks => {
             return prevTasks.map(task => {
                 return task.id === id ? { ...task, done: !task.done } : task
