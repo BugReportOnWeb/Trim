@@ -16,7 +16,7 @@ const AddTask = ({ addTask }) => {
             <button
                 className={`add-task-button ${showAddTaskForm ? 'form-button' : ''}`}
                 onClick={() => setShowAddTaskForm(prevState => !prevState)}
-            >{showAddTaskForm ? 'Close' : <TiPlus />}</button>
+            ><TiPlus /></button>
         </>
     )
 }

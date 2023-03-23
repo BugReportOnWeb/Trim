@@ -10,6 +10,7 @@
 }
 
 body {
+    overflow-x: hidden;
     height: 100vh;
     background-color: lightgreen;
     color: white;
@@ -92,7 +93,7 @@ body {
     color: #2C2D2D;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    font-size: 1.3em;
+    font-size: 1.4em;
     padding: 0.5em 1em 0.3em 1em;
     border: 1px solid #77dd77;
     border-radius: 20px;
@@ -104,9 +105,12 @@ body {
     border: 1px solid  #3cd070;
 }
 
-.form-button {
-    font-size: 0.9em;
-    padding: 0.9em 1em;
+.add-task-button > svg {
+    transition: rotate 0.3s;
+}
+
+.form-button > svg {
+    rotate: 45deg;
 }
 
 .add-task {
