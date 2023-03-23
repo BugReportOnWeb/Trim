@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useRef } from 'react'
 
 const Form = ({ addTask }) => {
     const inputRef = useRef(null)
