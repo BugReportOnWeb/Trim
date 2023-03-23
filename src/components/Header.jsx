@@ -1,6 +1,6 @@
 import { MdDelete } from 'react-icons/md'
 
-const Header = ({ day, date, taskLength, deleteCompletedTask }) => {
+const Header = ({ day, date, taskLength, deleteCompletedTask, disabled }) => {
     return (
         <div className='header'>
             <div className='day'>
@@ -11,7 +11,8 @@ const Header = ({ day, date, taskLength, deleteCompletedTask }) => {
                 <p>{date}</p>
             </div>
             
-            {taskLength > 0 && <MdDelete className='delete-completed' onClick={deleteCompletedTask} />}
+            {taskLength > 0 && <MdDelete className={`delete-completed ${!disabled ? 'delete-completed-disabled' : ''}`}
+                                   onClick={deleteCompletedTask} />}
         </div>
     )
 }
