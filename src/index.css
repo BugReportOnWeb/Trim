@@ -68,11 +68,11 @@ body {
 }
 
 .delete-completed-disabled {
-    color: lightgrey;
+    color: grey;
 }
 
 .delete-completed-disabled:hover {
-    color: lightgrey;
+    color: grey;
     cursor: not-allowed;
 }
 
