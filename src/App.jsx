@@ -9,17 +9,17 @@ const App = () => {
     const [tasks, setTasks] = useState([
         {
             id: 1,
-            text: 'Task one',
-            done: true
-        },
-        {
-            id: 2,
-            text: 'Another Task',
+            text: 'Add bottoms-up animation',
             done: false
         },
         {
+            id: 2,
+            text: 'Fix input section',
+            done: true
+        },
+        {
             id: 3,
-            text: 'Task three',
+            text: 'Add delete all completed tasks options',
             done: false
         },
     ])
