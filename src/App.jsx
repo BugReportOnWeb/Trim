@@ -14,8 +14,8 @@ const App = () => {
         },
         {
             id: 2,
-            text: 'Fix input section',
-            done: true
+            text: 'Edit task text',
+            done: false
         },
         {
             id: 3,
