@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useMemo } from 'react'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
@@ -14,15 +14,24 @@ const App = () => {
         },
         {
             id: 2,
-            text: 'Edit task text',
+            text: 'Background Texture',
             done: false
         },
         {
             id: 3,
             text: 'Add delete all completed tasks options',
-            done: false
+            done: true
         },
     ])
+
+    // TODO: Recheck on this function logic
+    // 1. Function renders even on no change to 'tasks'
+    // 2. Gives output 2 times when 'console.log' inside function
+    const disabled = useMemo(() => {
+        return tasks.map(task => {
+            return task.done 
+        }).includes(true)
+    }, [tasks])
 
     // Deleting Task
     const deleteTask = (id) => {
@@ -65,7 +74,8 @@ const App = () => {
                 date='March 23, 2023'
                 taskLength={tasks.length}
                 deleteCompletedTask={deleteCompletedTask}
-            /> 
+                disabled={disabled}
+            />
             {tasks.length > 0
                 ? <Tasks 
                       tasks={tasks} 
