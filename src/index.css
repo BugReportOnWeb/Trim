@@ -140,7 +140,6 @@ body {
 
 .add-task {
     position: absolute;
-    transform: translate(-1.5em, -1.5em);
 
     border-radius: 10px;
     padding: 1.5em;
@@ -153,6 +152,17 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1em;
+
+    opacity: 0;
+    z-index: -1;
+    transform: translate(-1.5em, 0em);
+    transition: opacity 0.1s ease, transform 0.1s ease;
+}
+
+.add-task.visible {
+    opacity: 1;
+    transform: translate(-1.5em, -1.5em);
+    z-index: 0;
 }
 
 .form-name {
