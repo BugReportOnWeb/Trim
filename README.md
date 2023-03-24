@@ -1,14 +1,14 @@
 <h1 id="header" align="center">
-    Todo Task
+    Trim
     <div id="badge">
-        <img id="code-size" src="https://img.shields.io/github/languages/code-size/BugReportOnWeb/todo-task" />
-        <img id="last-commit" src="https://img.shields.io/github/last-commit/BugReportOnWeb/todo-task" />
+        <img id="code-size" src="https://img.shields.io/github/languages/code-size/BugReportOnWeb/Trim" />
+        <img id="last-commit" src="https://img.shields.io/github/last-commit/BugReportOnWeb/Trim" />
     </div>
 </h1>
 
 ## Description
 
-Todo Task is a task management application built using the popular [React](http://reactjs.org/) framework, designed to deliver a seamless and intuitive user experience.
+Trim is a task management application built using the popular [React](http://reactjs.org/) framework, designed to deliver a seamless and intuitive user experience.
 
 * The app currently operates as a complete static web application. It may soon be updated with backend functionality to store previous tasks even after a page refresh.
 * The goal in creating this app was to deepen the understanding of front-end development, specifically with the React library.
@@ -20,8 +20,8 @@ If you want to test and try the app on your own, here are the steps you can foll
 
 * Clone the repository to a desired destination and head inside the same.
 ```bash
-$ git clone https://github.com/BugReportOnWeb/todo-task.git
-$ cd todo-task
+$ git clone https://github.com/BugReportOnWeb/Trim.git
+$ cd Trim
 ```
 
 * Install the dependencies and start the development server.
