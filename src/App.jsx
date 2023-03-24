@@ -29,20 +29,15 @@ const App = () => {
         {
             id: 1,
             text: 'Add bottoms-up animation',
-            done: false
+            done: true
         },
         {
             id: 2,
             text: 'Page change animation',
-            done: false
-        },
-        {
-            id: 3,
-            text: 'Add delete all completed tasks options',
             done: true
         },
         {
-            id: 4,
+            id: 3,
             text: 'Structure const data',
             done: false
         },
