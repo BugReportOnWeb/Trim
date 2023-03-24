@@ -12,7 +12,7 @@ const AddTask = ({ addTask }) => {
 
     return (
         <>
-            {showAddTaskForm && <Form addTask={handleAddTask} />}
+            <Form addTask={handleAddTask} showAddTaskForm={showAddTaskForm} />
             <button
                 className={`add-task-button ${showAddTaskForm ? 'form-button' : ''}`}
                 onClick={() => setShowAddTaskForm(prevState => !prevState)}
