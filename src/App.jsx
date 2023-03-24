@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo } from 'react'
+import { useState, useRef, useMemo, useEffect } from 'react'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
@@ -43,11 +43,6 @@ const App = () => {
         },
         {
             id: 4,
-            text: '\'Delete All\' button testing',
-            done: true
-        },
-        {
-            id: 5,
             text: 'Structure const data',
             done: false
         },
