@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 
-const Form = ({ addTask }) => {
+const Form = ({ addTask, showAddTaskForm }) => {
     const inputRef = useRef(null)
 
     const handleAddTask = (e) => {
@@ -16,7 +16,7 @@ const Form = ({ addTask }) => {
     }
 
     return (
-        <form onSubmit={handleAddTask} className='add-task'>
+        <form onSubmit={handleAddTask} className={`add-task ${showAddTaskForm ? 'visible' : ''}`}>
             <h1 className='form-name'>Add Task</h1>
             <input
                 ref={inputRef}
