@@ -8,7 +8,7 @@
 
 ## Description
 
-Trim is a task management application built using the popular [React](http://reactjs.org/) framework, designed to deliver a seamless and intuitive user experience.
+[Trim](trim.onrender.com) is a task management application built using the popular [React](http://reactjs.org/) framework, designed to deliver a seamless and intuitive user experience.
 
 * The app currently operates as a complete static web application. It may soon be updated with backend functionality to store previous tasks even after a page refresh.
 * The goal in creating this app was to deepen the understanding of front-end development, specifically with the React library.
