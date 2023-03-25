@@ -28,18 +28,18 @@ const App = () => {
     const [tasks, setTasks] = useState([
         {
             id: 1,
-            text: 'Add bottoms-up animation',
-            done: true
+            text: 'Add github collaboration footer',
+            done: false
         },
         {
             id: 2,
-            text: 'Page change animation',
-            done: true
+            text: 'Fix add task button bug on mobile',
+            done: false
         },
         {
             id: 3,
             text: 'Structure const data',
-            done: false
+            done: true
         },
     ])
 
