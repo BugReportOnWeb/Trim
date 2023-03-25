@@ -1,47 +1,12 @@
 import { useState, useRef, useMemo, useEffect } from 'react'
+import * as Constants from './constants/constants'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
 
 const App = () => {
+    const [tasks, setTasks] = useState(Constants.defaultTasks)
     const inputRef = useRef(null)
-    const currentDate = new Date();
-
-    const [ date, month, year, day ] = [
-        currentDate.getDate(),
-        currentDate.getMonth(),
-        currentDate.getFullYear(),
-        currentDate.getDay()
-    ]
-
-    const days = [
-        'Sunday', 'Monday', 'Tuesday',
-        'Wednesday', 'Thursday', 'Friday', 'Saturday'
-    ]
-
-    const months = [
-        'January', 'Febuary', 'March', 'April',
-        'May', 'June', 'July', 'August', 'September',
-        'October', 'November', 'December'
-    ]
-
-    const [tasks, setTasks] = useState([
-        {
-            id: 1,
-            text: 'Add github collaboration footer',
-            done: false
-        },
-        {
-            id: 2,
-            text: 'Fix add task button bug on mobile',
-            done: false
-        },
-        {
-            id: 3,
-            text: 'Structure const data',
-            done: true
-        },
-    ])
 
     // TODO: Recheck on this function logic
     // 1. Function renders even on no change to 'tasks'
@@ -89,8 +54,8 @@ const App = () => {
     return (
         <div className='App'>
             <Header
-                day={`${days[day]}`}
-                date={`${months[month]} ${date}, ${year}`}
+                day={`${Constants.days[Constants.day]}`}
+                date={`${Constants.months[Constants.month]} ${Constants.date}, ${Constants.year}`}
                 taskLength={tasks.length}
                 deleteCompletedTask={deleteCompletedTask}
                 disabled={disabled}
